@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registration</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" >
+
+  <link rel="stylesheet" href="/internship/assets/css/register.css"> 
+</head>
+<style>
+  input[type="text"]:not([type="password"]) {
+  text-transform: capitalize;
+}
+
+</style>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1 style="text-transform: uppercase;">Create Your Account</h1>
+    </div>
+    <br><br>
+    <form class="form" id="form" method="post" action="">
+      <table>
+        <div class="row">
+          <div class="col-md-6">
+            <label>Enter your username</label><br>
+            <input type="text" id="username" name="gname"><br>
+            <small>Error Message</small><br>
+          </div>
+          <div class="col-md-6">
+            <label>Enter email ID</label><br>
+            <input type="text" id="email" name="gmail" style="text-transform: lowercase;"><br>
+            <small>Error Message</small><br>
+          </div>
+          <div class="col-md-6">
+            <label>Enter Age</label><br>
+            <input type="number" id="age" name="gage"><br>
+            <small>Error Message</small><br>
+          </div>
+          <div class="col-md-6">
+            <label>Enter Date of Birth</label><br>
+            <input type="date" id="dateofbirth" name="gdateofbirth"><br>
+            <small>Error Message</small><br>
+          </div>
+          <div class="col-md-6">
+            <label>Enter Contact Number</label><br>
+            <input type="number" id="contactnumber" name="gnumber"style=""><br>
+            <small >Error Message</small><br>
+          </div>
+          <div class="col-md-6">
+            <label>Enter address</label><br>
+            <input type="text" id="address" name="gaddress"><br>
+            <small>Error Message</small><br>
+          </div>
+          <div class="col-md-6">
+            <label>Enter Password</label><br>
+            <input type="password" id="password1" name="gpassword"><br>
+            <small>Error Message</small><br>
+          </div>
+          <div class="col-md-6">
+            <label>Confirm Password</label><br>
+            <input type="password" id="password2" name="gpassword1" ><br>
+            <small>Error Message</small><br>
+          </div></table><br><br><br>
+           <message id="message" style="margin: 27%;"></message>
+
+        <br>
+        <button type="submit" id="register_save" name="button">Submit</button> 
+        <button type="reset" value="reset" id="reset">Reset</button>
+     <p>Already have an account? <a href="../views/login.html">Login now</a></p>
+    </table>
+      </div>
+    </form>
+    <br>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" ></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="/internship/js/register.js"></script>
+  
+</body>
+</html>

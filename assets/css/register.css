@@ -1,0 +1,190 @@
+/* CSS for the registration form */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  } 
+  body {
+    background: linear-gradient(135deg, #5abae0, #82e5ac);
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 100vh;
+  }
+  /* Small devices (up to 576px) */
+  @media (max-width: 576px) {
+  .container {
+    padding: 10px;
+  }
+  }
+
+  /* Medium devices (between 576px and 768px) */
+  @media (min-width: 576px) and (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+  }
+
+  /* Large devices (between 768px and 992px) */
+  @media (min-width: 768px) and (max-width: 992px) {
+  .container {
+    padding: 30px;
+  }
+  }
+
+  /* Extra large devices (above 992px) */
+  @media (min-width: 992px) {
+  .container {
+    padding: 40px;
+  }
+}
+
+  .container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 30px;
+    padding-left: 7%;
+    background-color: transparent;
+    border-radius: 5px;
+    border-radius: 30px;
+    box-shadow: 2px 2px 25px rgb(7, 7, 7);
+    overflow: hidden;
+  }
+  table {
+    margin-left: 50px;
+    margin-bottom: 15px;
+    margin-top: -50px;
+    margin-bottom: -15px;
+}
+message {
+    color: #030303;
+    align-items: center;
+    margin: 13%;
+    background: #de6969;
+    font-size: medium;
+    font-weight: bold;
+    border-radius: 4px;
+    padding: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+} 
+  .header {
+    text-align: center;
+    margin-bottom: 20px;
+  } 
+  .header h1 {
+    margin: 0;
+    text-align: center;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgb(207, 82, 10);
+    text-underline-position: under;
+    font-size: xx-large;
+    padding-right: 100px;
+  }
+  .form label {
+    font-weight: bold;
+    text-align: left;
+    font-size: 16px;
+    color: black;
+    text-shadow: 2px 2px 3px rgba(1, 1, 1, 0.5);
+  }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+  }
+  .row > * {
+    padding: 0 10px;
+    width: 50%; 
+  }
+  input {
+    width: 73%;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(20, 20, 20);
+    background: transparent;
+    border-bottom: 2px solid rgba(83, 18, 18, 0.86);
+    box-sizing: border-box;
+    padding: 0;
+    margin-bottom: 5px;
+    text-transform: capitalize;
+  }
+  button{
+	width:30%;
+	margin: 5% auto;
+	color:black;
+	font-size:15px;
+	font-weight: bold;
+	border:none;
+	outline:none;
+	padding:6px 20px;
+	opacity:1;
+	background:linear-gradient(135deg,#71b7e6,#9b59b6);
+	border-radius:10px;
+	text-shadow:2px 2px 3px  rgba(15, 6, 6, 0.86);
+	box-shadow:3px 3px 5px  rgb(94, 20, 20);
+	margin-left:9%;
+  margin-top: 3%;
+} 
+button:focus {
+  outline: none;
+}
+p {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  padding-right: 50px;
+}
+a {
+  color: rgb(162, 53, 28);
+}
+.form-container input:focus{
+	outline:none;
+}
+.form-container.success input{
+	border-color: rgb(9, 10, 9);
+}
+.form-container.error input{
+	border-color:red;
+}
+.form-container.error {
+  color: red;
+  font-size: 9px;
+  text-align: left;
+  padding-left: 5px;
+  white-space: nowrap;
+  overflow: visible;
+}
+small {
+  position: absolute;
+  visibility: hidden;
+  color: red;
+  text-align: left;
+  white-space: nowrap;
+  overflow: visible;
+  max-width: 100%;
+}
+.form-container.error small{
+	visibility:visible;
+	font-size:14px;
+	font-weight: bold;
+	position:absolute;
+	width: auto;
+}
+.message {
+  color: #030303;
+  align-items: center;
+  margin: 3%;
+  background: #de6969;
+  font-size: medium;
+  font-weight: bold;
+  border-radius: 4px;
+  padding: 20px;
+}
+  

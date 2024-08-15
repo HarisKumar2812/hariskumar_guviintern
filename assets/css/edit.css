@@ -1,0 +1,187 @@
+/* CSS for the profile edit form */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: linear-gradient(135deg, #5abae0, #82e5ac);
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 100vh;
+}
+.container {
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 5px;
+    border-radius: 30px;
+    box-shadow: 2px 2px 25px rgb(7, 7, 7);
+    overflow: hidden;
+    width: 100%; 
+    max-width: 400px; 
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+/* Small devices (up to 576px) */
+@media (max-width: 576px) {
+    .container {
+      padding: 10px;
+    }
+  }
+  
+  /* Medium devices (between 576px and 768px) */
+  @media (min-width: 576px) and (max-width: 768px) {
+    .container {
+      padding: 20px;
+    }
+  }
+  
+  /* Large devices (between 768px and 992px) */
+  @media (min-width: 768px) and (max-width: 992px) {
+    .container {
+      padding: 30px;
+    }
+  }
+  
+  /* Extra large devices (above 992px) */
+  @media (min-width: 992px) {
+    .container {
+      padding: 40px;
+    }
+  }
+  
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+}
+table {
+    margin-left: 25px;
+    border-bottom: 15px;
+    margin-top: -20px;
+    margin-bottom: -5px;
+}
+.header {
+    text-align: center;
+    background-color: linear-gradient(135deg, #71b7e6);   
+}
+.header h1 {
+    margin: 0;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgb(134, 31, 5);
+    text-underline-position: under;
+    font-weight: bold;
+    font-size: 25px;
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+}
+.form-container {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    position: relative;
+    text-align: center;
+	align-items:cender;
+    max-width: 300px;
+    margin: 0 auto;   
+}
+label {
+    text-align: left;
+    display: block;
+    max-width: 160px; 
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    text-shadow: 2px 2px 4px rgba(1, 1, 1, .6);
+    text-align: left;
+    padding-right: 5px;
+    margin-bottom: 0;
+}
+input {
+    width: 135%;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(20, 20, 20);
+    background: transparent;
+    border-bottom: 2px solid rgba(83, 18, 18, 0.86);
+    box-sizing: border-box;
+    padding: 0; 
+    margin-bottom: 5px; 
+    text-transform: capitalize;
+}
+button{
+	width:35%;
+	margin: 5% auto;
+	color:black;
+	font-size:15px;
+	font-weight: bold;
+	border:none;
+	outline:none;
+	padding:6px 20px;
+	opacity:1;
+	background:linear-gradient(135deg,#71b7e6,#9b59b6);
+	border-radius:10px;
+	text-shadow:2px 2px 3px  rgba(15, 6, 6, 0.86);
+	box-shadow:3px 3px 5px  rgb(94, 20, 20);
+	margin-left:9%;
+  margin-top: 5%;
+} 
+ button:focus {
+  outline: none;
+}
+.form-container input:focus{
+	outline:none;
+}
+.form-container.success input{
+	border-color: rgb(9, 10, 9);	
+}
+.form-container.error input{
+	border-color:red;
+}
+.form-container.error {
+    color: red;
+    font-size: 9px;
+    text-align: left;
+    padding-left: 5px;
+    white-space: nowrap;
+    overflow: visible;
+}
+small {
+    position: absolute;
+    visibility: hidden;
+    color: red;
+    text-align: left;
+    white-space: nowrap;
+    overflow: visible;
+    max-width: 100%;
+}
+.form-container.error small{
+	visibility:visible;
+	font-size:14px;
+	font-weight: bold;
+	position:absolute;
+	width: auto;
+
+}
+
+   
+    
+	
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,134 @@
+/* CSS for the profile form */
+
+* {
+	box-sizing: border-box;
+  }
+  body {
+	background: linear-gradient(135deg, #5abae0, #82e5ac);
+	font-family: sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin: 0;
+	padding: 20px;
+	box-sizing: border-box;
+  }
+  /* Small devices (up to 576px) */
+@media (max-width: 576px) {
+    .container {
+      padding: 10px;
+    }
+  }
+  
+  /* Medium devices (between 576px and 768px) */
+  @media (min-width: 576px) and (max-width: 768px) {
+    .container {
+      padding: 20px;
+    }
+  }
+  
+  /* Large devices (between 768px and 992px) */
+  @media (min-width: 768px) and (max-width: 992px) {
+    .container {
+      padding: 30px;
+    }
+  }
+  
+  /* Extra large devices (above 992px) */
+  @media (min-width: 992px) {
+    .container {
+      padding: 40px;
+    }
+  }
+  .container {
+    width: 40% !important;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: transparent;
+    border-radius: 30px;
+    box-shadow: 2px 2px 25px rgb(8 7 7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+  img {
+	width: 180px;
+	height: 180px;
+	object-fit: cover;
+	margin-bottom: 20px;
+  }
+  
+  table {
+	font-size: 130%;
+	font-weight: bolder;
+	margin-bottom: 20px;
+	margin-left: auto;
+	margin-right: auto;
+  }
+  label {
+    text-align: left;
+    display: block;
+    max-width: 160px; 
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    text-shadow: 2px 2px 4px rgba(1, 1, 1, .6);
+    text-align: left;
+    padding-right: 5px; 
+    margin-bottom: 0;
+} 
+  small {
+	font-size: 110%;
+	color: #660906;
+	margin-bottom: 6px;
+	padding: 6px;
+	text-transform: capitalize;
+  } 
+  span {
+	text-transform: capitalize;
+  }
+  .header h1{
+	color: #660906;
+	font-size: 25px;
+	font-weight: bold;
+	white-space: nowrap;
+  }
+  .header h2 {
+	margin-bottom: 10px; 
+	color: #0f0d0d;
+	padding: 10px;
+	font-size: 19px;
+  font-weight: bold;
+  }
+  button{
+  width:30%;
+	margin: 5% auto;
+	color:black;
+	font-size:15px;
+	font-weight: bold;
+	border:none;
+	outline:none;
+	padding:6px 20px;
+	opacity:1;
+	background:linear-gradient(135deg,#71b7e6,#9b59b6);
+	border-radius:14px;
+	text-shadow:2px 2px 3px  rgba(15, 6, 6, 0.86);
+	box-shadow:3px 3px 5px  rgb(94, 20, 20);
+	margin-left:9%;
+  margin-top: 3%;
+	}
+  button + button {
+	margin-left: 5%; 
+  }
+  button:focus {
+    outline: none;
+  } 
+  p {
+	color: #dd2222;
+  }
+  
