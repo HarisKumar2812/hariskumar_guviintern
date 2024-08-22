@@ -1,70 +1,117 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>profile edit</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" >
-  <link rel="stylesheet" href="/internship/assets/css/edit.css"> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Authentication - Edit Profile</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .section {
+            display: none;
+            text-align: center;
+        }
+        .section.active {
+            display: block;
+        }
+        .back-button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+        .section h2 {
+            color: #7FFF00; /* Parrot Green */
+        }
+        button, input[type="submit"], a {
+            background-color: #7FFF00; /* Parrot Green */
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            text-decoration: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        button:hover, input[type="submit"]:hover, a:hover {
+            background-color: #5fbf00; /* Slightly darker green for hover effect */
+        }
+        form {
+            margin-top: 20px;
+        }
+        .toggle-password {
+            cursor: pointer;
+            font-size: 18px;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+    </style>
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+        }
+
+        function populateEditForm() {
+            const username = document.getElementById('profile_username').textContent;
+            const storedData = JSON.parse(localStorage.getItem(username));
+
+            if (storedData) {
+                document.getElementById('edit_name').value = storedData.name;
+                document.getElementById('edit_age').value = storedData.age;
+                document.getElementById('edit_dob').value = storedData.dob;
+                document.getElementById('edit_phone').value = storedData.phone;
+                document.getElementById('edit_address').value = storedData.address;
+            }
+        }
+
+        function updateProfile() {
+            const username = document.getElementById('profile_username').textContent;
+            const storedData = JSON.parse(localStorage.getItem(username));
+
+            if (storedData) {
+                storedData.name = document.getElementById('edit_name').value;
+                storedData.age = document.getElementById('edit_age').value;
+                storedData.dob = document.getElementById('edit_dob').value;
+                storedData.phone = document.getElementById('edit_phone').value;
+                storedData.address = document.getElementById('edit_address').value;
+
+                localStorage.setItem(username, JSON.stringify(storedData));
+
+                alert('Profile updated successfully!');
+
+                // Update the profile display
+                document.getElementById('profile_name').textContent = storedData.name;
+                document.getElementById('profile_age').textContent = storedData.age;
+                document.getElementById('profile_dob').textContent = storedData.dob;
+                document.getElementById('profile_phone').textContent = storedData.phone;
+                document.getElementById('profile_address').textContent = storedData.address;
+
+                // Return to the profile page
+                showSection('profile');
+            } else {
+                alert('Error updating profile. Please try again.');
+            }
+        }
+
+        window.onload = function() {
+            populateEditForm();
+        }
+    </script>
 </head>
-
 <body>
-  <div class="container">
-    <div class="header">
-      <h1 style="text-transform: uppercase;">Edit your profile details:</h1>
-    </div>
-    <br><br>
-    <form class="form" id="profileForm" method="post" action="">
-      <table>
-        <tr>
-          <td>
-            <label> Username</label>
-            <input type="text" id="name1" name="gname"><br>
-            <small>Error Message</small><br>
-          </td>
-        </tr>
-        <tr>
-          
-        <tr>
-          <td>
-            <label> Age</label>
-            <input type="number" id="age1" name="gage"><br>
-            <small>Error Message</small><br>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <label> Date of Birth</label>
-            <input type="date" id="date1" name="gdateofbirth"><br>
-            <small>Error Message</small><br>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <label> Contact Number</label>
-            <input type="number" id="contact1" name="gnumber"><br>
-            <small class="error">Error Message</small><br>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <label> Address</label>
-            <input type="text" id="address1" name="gaddress"><br>
-            <small>Error Message</small><br>
-          </td>
-        </tr>
-
-      </table>
-
-        <button type="button" onclick="goBack()">Back</button> <!-- Back button -->
-
-        <button type="submit" value="Update">Update</button>
-
-    </div>
-    </form>
-  </div>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" ></script>
-  <script src="https://code.jquery.com/jquery-3.6.3.js" crossorigin="anonymous"></script>   
-  <script src="/internship/js/profile.js"></script>
-  <script src="/internship/js/edit.js"></script></body>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
-  </html>
+    <!-- Edit Profile Page -->
+    <div id="edit_profile"
