@@ -1,36 +1,79 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>profile</title>
-    
-    <link rel="stylesheet" href="/internship/assets/css/profile.css"> 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" >
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Authentication - Profile</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .section {
+            display: none;
+            text-align: center;
+        }
+        .section.active {
+            display: block;
+        }
+        .back-button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+        .section h2 {
+            color: #7FFF00; /* Parrot Green */
+        }
+        button, input[type="submit"], a {
+            background-color: #7FFF00; /* Parrot Green */
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            text-decoration: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        button:hover, input[type="submit"]:hover, a:hover {
+            background-color: #5fbf00; /* Slightly darker green for hover effect */
+        }
+    </style>
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+        }
 
+        function logout() {
+            alert('You have been logged out.');
+            showSection('login');
+        }
+    </script>
 </head>
 <body>
-    <div class="container">
-        <div>
-           <img src="\internship\assets\images\profile-icon.png" style="width:180px; height:180px;object-fit: cover;">
-        </div>
-        <div class="header">
-
-        <div>
-            <h1>Hello <span id="name"></span> Welcome Back!</h1>
-
-            <table>
-                <h2 style="	margin-left: 10px;"><div>Your Profile Details:</div></h2>
-                <tr><td><label>Age:</label></td><td><small id="age"><br></small></td></tr>
-                <tr><td><label> Date of Birth:</lable></td><td><small id="date" ><br></small></td></tr>
-                <tr><td><label>Contact Number:</label></td><td><small id="contact"><br></small></td></tr>
-                <tr><td><label> Address:</label></td><td><small id="address"><br></small></td></tr>
-            </table>
-        </div>
-        <button id="logoutButton">Logout</button>
-                <button id="myButton">Edit</button>
-    </div></div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" ></script>
-        <script src="https://code.jquery.com/jquery-3.6.3.js"  crossorigin="anonymous"></script>   
-        <script src="/internship/js/profile.js"></script>
-    
-
+    <!-- Profile Page -->
+    <div id="profile" class="section active">
+        <button class="back-button" onclick="showSection('login')">Back</button>
+        <h2>Profile Details</h2>
+        <p><strong>Username:</strong> <span id="profile_username"></span></p>
+        <p><strong>Full Name:</strong> <span id="profile_name"></span></p>
+        <p><strong>Age:</strong> <span id="profile_age"></span></p>
+        <p><strong>Date of Birth:</strong> <span id="profile_dob"></span></p>
+        <p><strong>Phone Number:</strong> <span id="profile_phone"></span></p>
+        <p><strong>Address:</strong> <span id="profile_address"></span></p>
+        <button class="logout-button" onclick="logout()">Logout</button>
+    </div>
 </body>
 </html>
